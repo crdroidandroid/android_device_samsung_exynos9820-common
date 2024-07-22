@@ -138,6 +138,8 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_HAVE_FOD),true)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.udfps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.udfps.rc
+
+TARGET_HAS_UDFPS := true
 endif
 
 # Kernel
