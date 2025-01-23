@@ -1,0 +1,6 @@
+allow zygote activity_service:service_manager find;
+allow zygote system_server:binder { call transfer };
+allow zygote zygote:file { read open };
+allow zygote zygote:dir { search getattr };
+allow zygote sysfs:dir {read};
+allow zygote sysfs:dir {open};
