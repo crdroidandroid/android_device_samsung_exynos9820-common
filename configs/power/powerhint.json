@@ -2,11 +2,12 @@
     "Nodes": [
         {
             "Name": "GPUMinFreq",
-            "Path": "/dev/gpu_freq_min",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
-                "0x00008ba60",
-                "0x00003f7a0",
-                "0x000026160"
+                "572000",
+                "377000",
+                "260000",
+                "156000"
             ],
             "HoldFd": true,
             "ResetOnInit": true
@@ -66,6 +67,12 @@
             "Value": "30"
         },
         {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "377000"
+        },
+        {
             "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
@@ -108,12 +115,6 @@
             "Value": "1"
         },
         {
-            "PowerHint": "INTERACTIVE",
-            "Node": "GPUMinFreq",
-            "Duration": 0,
-            "Value": "0x00003f7a0"
-        },
-        {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
             "Node": "DoubleTapToWakeEnable",
             "Duration": 0,
@@ -123,13 +124,7 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "0x00008ba60"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "GPUMinFreq",
-            "Duration": 5000,
-            "Value": "0x00008ba60"
+            "Value": "572000"
         }
     ]
 }
