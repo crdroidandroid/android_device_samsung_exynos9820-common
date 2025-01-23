@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2022 The LineageOS Project
+// Copyright (C) 2022-2024 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ cc_library_static {
     ],
     header_libs: ["libbase_headers"],
     include_dirs: [
+        "bootable/deprecated-ota/edify/include",
         "bootable/recovery",
-        "bootable/recovery/edify/include",
         "bootable/recovery/otautil/include",
         "system/libziparchive/include"
     ],
